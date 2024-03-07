@@ -62,6 +62,7 @@ def test_password_change_verification(page):
     page.goto("https://makeup.com.ua/ua/")
     page.locator(".header-office").click()
     page.get_by_text("Забули пароль?").click()
+    page.wait_for_timeout(1500)
     page.get_by_role("textbox", name="E-mail").click()
     page.get_by_role("textbox", name="E-mail").fill("o.ionenko129@gmail.com")
     page.get_by_role("button", name="Нагадати").click()
